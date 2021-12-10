@@ -226,6 +226,7 @@
         "scalameta.metals"
     ],
     "vim.foldfix": true,
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+    "metals.millScript": "/usr/local/bin/mill"
 
 }
