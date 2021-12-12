@@ -29,7 +29,9 @@
     "remote.SSH.remotePlatform": {
         "vscode-remote": "linux",
         "vscode-remote0": "linux",
-        "vscode-remote-gz": "linux"
+        "vscode-remote-gz": "linux",
+        "vscode-remote-ny": "linux",
+        "colab": "linux"
     },
     "window.titleBarStyle": "custom",
     "terminal.integrated.defaultLocation": "editor",
@@ -222,11 +224,13 @@
         "**/.ammonite": true
     },
     "settingsSync.ignoredExtensions": [
-        "emroussel.atomize-atom-one-dark-theme",
-        "scalameta.metals"
+        "emroussel.atomize-atom-one-dark-theme"
     ],
     "vim.foldfix": true,
     "editor.detectIndentation": false,
-    "metals.millScript": "/usr/local/bin/mill"
+    "remote.SSH.defaultExtensions": [
+        "scalameta.metals",
+        "matklad.rust-analyzer"
+    ]
 
 }
