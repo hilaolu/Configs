@@ -1,3 +1,3 @@
 function gc
-    git clone https://github.com/$args
+    git clone https://github.com/$argv
 end
