@@ -23,7 +23,6 @@
     "timeline.excludeSources": [
         "git-history"
     ],
-    "window.zoomLevel": 2,
     "workbench.editor.pinnedTabSizing": "compact",
     "remote.SSH.useLocalServer": false,
     "remote.SSH.remotePlatform": {
@@ -31,7 +30,11 @@
         "vscode-remote0": "linux",
         "vscode-remote-gz": "linux",
         "vscode-remote-ny": "linux",
-        "colab": "linux"
+        "colab": "linux",
+        "qing": "linux",
+        "remote-ny": "linux",
+        "remote-colab": "linux",
+        "remote-gz": "linux"
     },
     "window.titleBarStyle": "custom",
     "terminal.integrated.defaultLocation": "editor",
@@ -224,13 +227,18 @@
         "**/.ammonite": true
     },
     "settingsSync.ignoredExtensions": [
-        "emroussel.atomize-atom-one-dark-theme"
+        "emroussel.atomize-atom-one-dark-theme",
+        "ms-vscode-remote.remote-containers",
+        "ms-toolsai.jupyter-keymap"
     ],
     "vim.foldfix": true,
     "editor.detectIndentation": false,
     "remote.SSH.defaultExtensions": [
         "scalameta.metals",
         "matklad.rust-analyzer"
-    ]
+    ],
+    "update.showReleaseNotes": false,
+    "update.mode": "none",
+    "window.zoomLevel": 5
 
 }
