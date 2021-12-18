@@ -239,6 +239,10 @@
     ],
     "update.showReleaseNotes": false,
     "update.mode": "none",
-    "window.zoomLevel": 5
+    "window.zoomLevel": 5,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "terminal.integrated.confirmOnKill": "never",
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.enablePersistentSessions": false
 
 }
