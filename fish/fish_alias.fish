@@ -28,3 +28,8 @@ alias pstl="podman start --latest"
 alias pr="podman restart"
 alias prl="podman restart --latest"
 alias pr="podman run"
+
+alias py="python3"
+alias py2="python2"
+alias py3="python3"
+
