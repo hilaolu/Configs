@@ -6,7 +6,7 @@
         "when": "vim.mode == 'Normal'"
     },
     {
-        "key": "shift+enter",
+        "key": "ctrl+enter",
         "command": "notebook.cell.execute",
         "when": "vim.mode == 'Normal' && notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code'"
     },
@@ -757,5 +757,10 @@
         "key": "ctrl+shift+enter",
         "command": "-editor.action.insertLineBefore",
         "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-jupyter.runByLineStop",
+        "when": "jupyter.notebookeditor.runByLineInProgress && notebookKernelCount > 0"
     }
 ]
