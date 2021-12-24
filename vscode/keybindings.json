@@ -8,7 +8,7 @@
     {
         "key": "shift+enter",
         "command": "notebook.cell.execute",
-        "when": "vim.mode == 'Normal' && notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
+        "when": "vim.mode == 'Normal' && notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code'"
     },
     {
         "key": "ctrl+.",
@@ -742,5 +742,20 @@
         "key": "escape",
         "command": "-notebook.cell.quitEdit",
         "when": "inputFocus && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-notebook.cell.insertCodeCellBelow",
+        "when": "notebookCellListFocused && !inputFocus"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
     }
 ]
