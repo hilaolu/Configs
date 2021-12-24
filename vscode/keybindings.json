@@ -3,7 +3,7 @@
     {
         "key": "ctrl+,",
         "command": "notebook.focusPreviousEditor",
-        "when": "vim.mode == 'Normal' && config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+        "when": "vim.mode == 'Normal'"
     },
     {
         "key": "shift+enter",
@@ -13,7 +13,7 @@
     {
         "key": "ctrl+.",
         "command": "notebook.focusNextEditor",
-        "when": "vim.mode == 'Normal' && config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+        "when": "vim.mode == 'Normal'"
     },
     {
         "key": "'",
