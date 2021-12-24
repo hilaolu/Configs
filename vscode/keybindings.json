@@ -1,31 +1,43 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-
-        {
-            "key": "'",
-            "command": "cursorPageDown",
-            "when": "vim.mode != 'Insert'",
-        },
-        {
-            "key": "ctrl+'",
-            "command": "cursorPageUp",
-            "when": "vim.mode != 'Insert'",
-        },
-        {
-            "key": "alt+q",
-            "command": "workbench.action.previousEditor",
-        },
-        {
-            "key": "alt+e",
-            "command": "workbench.action.nextEditor",
-        },
-        {
-            "key": "ctrl+'",
-            "command": "cursorPageUp",
-            "when": "vim.mode != 'Insert'",
-        },
-
-
+    {
+        "key": "ctrl+,",
+        "command": "notebook.focusPreviousEditor",
+        "when": "vim.mode == 'Normal' && config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "notebook.cell.execute",
+        "when": "vim.mode == 'Normal' && notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "notebook.focusNextEditor",
+        "when": "vim.mode == 'Normal' && config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+    },
+    {
+        "key": "'",
+        "command": "cursorPageDown",
+        "when": "vim.mode != 'Insert'",
+    },
+    {
+        "key": "ctrl+'",
+        "command": "cursorPageUp",
+        "when": "vim.mode != 'Insert'",
+    },
+    {
+        "key": "alt+q",
+        "command": "workbench.action.previousEditor",
+    },
+    {
+        "key": "alt+e",
+        "command": "workbench.action.nextEditor",
+    },
+    {
+        "key": "ctrl+'",
+        "command": "cursorPageUp",
+        "when": "vim.mode != 'Insert'",
+    },
     {
         "key": "ctrl+f",
         "command": "-extension.vim_ctrl+f",
@@ -51,7 +63,6 @@
         "command": "editor.action.indentLines",
         "when": "vim.mode != 'Insert'"
     },
-                                            
     {
         "key": "ctrl+t",
         "command": "workbench.explorer.fileView.focus",
@@ -67,10 +78,6 @@
         "command": "selectNextSuggestion",
         "when": "editorTextFocus && suggestWidgetVisible"
     },
-
-
-
-
     // don't touch
     {
         "key": "ctrl+shift+t",
@@ -661,5 +668,69 @@
         "key": "ctrl+t",
         "command": "-extension.vim_ctrl+t",
         "when": "editorTextFocus && vim.active && vim.use<C-t> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-jupyter.runcurrentcell",
+        "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !jupyter.havenativecells && !notebookEditorFocused"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-jupyter.runcurrentcelladvance",
+        "when": "editorTextFocus && isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused"
+    },
+    {
+        "key": "down",
+        "command": "-notebook.focusNextEditor",
+        "when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "-notebook.focusNextEditor",
+        "when": "notebookEditorFocused && notebookOutputFocused"
+    },
+    {
+        "key": "j",
+        "command": "-notebook.focusNextEditor",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
+    },
+    {
+        "key": "up",
+        "command": "-notebook.focusPreviousEditor",
+        "when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+    },
+    {
+        "key": "k",
+        "command": "-notebook.focusPreviousEditor",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+    },
+    {
+        "key": "ctrl+alt+[",
+        "command": "-jupyter.gotoPrevCellInFile",
+        "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
+    },
+    {
+        "key": "meta+enter",
+        "command": "-notebook.cell.execute",
+        "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-notebook.cell.executeAndSelectBelow",
+        "when": "notebookCellListFocused && notebookCellType == 'markup' || notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "-workbench.action.openSettings"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "-editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "-problems.action.showQuickFixes",
+        "when": "problemFocus"
     }
 ]

@@ -45,179 +45,357 @@
         "<C-w>": false,
         "<C-b>": false,
         "<C-'>": false,
+        "<C-.>": false,
+        ".": false,
     },
     // "vim.debug.loggingLevelForAlert": "debug", 
     "vim.insertModeKeyBindings": [
         {
-            "before": ["<C-c>"],
-            "after": ["<Esc>"]
+            "before": [
+                "<C-c>"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         },
         {
-            "before": ["<C-j>"],
-            "after": ["<left>"]
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "<left>"
+            ]
         },
         {
-            "before": ["<C-k>"],
-            "after": ["<up>"]
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "<up>"
+            ]
         },
         {
-            "before": ["<C-l>"],
-            "after": ["<down>"]
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "<down>"
+            ]
         },
         {
-            "before": ["<C-;>"],
-            "after": ["<right>"]
+            "before": [
+                "<C-;>"
+            ],
+            "after": [
+                "<right>"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
-            "before": ["<C-right>"],
-            "after": ["$"]
+            "before": [
+                "<C-right>"
+            ],
+            "after": [
+                "$"
+            ]
         },
         {
-            "before": ["<C-j>"],
-            "after": ["^"]
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "^"
+            ]
         },
         {
-            "before": ["<C-k>"],
-            "after": ["8","<up>"]
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "8",
+                "<up>"
+            ]
         },
         {
-            "before": ["<C-l>"],
-            "after": ["8","<down>"]
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "8",
+                "<down>"
+            ]
         },
         {
-            "before": ["k"],
-            "after": ["<up>"]
+            "before": [
+                "k"
+            ],
+            "after": [
+                "<up>"
+            ]
         },
         {
-            "before": ["l"],
-            "after": ["<down>"]
+            "before": [
+                "l"
+            ],
+            "after": [
+                "<down>"
+            ]
         },
         {
-            "before": [";"],
-            "after": ["<right>"]
+            "before": [
+                ";"
+            ],
+            "after": [
+                "<right>"
+            ]
         },
         {
-            "before": ["j"],
-            "after": ["<left>"]
+            "before": [
+                "j"
+            ],
+            "after": [
+                "<left>"
+            ]
         },
         {
-            "before": ["K"],
-            "commands": ["editor.action.moveLinesUpAction"]
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
         },
         {
-            "before": ["L"],
-            "commands": ["editor.action.moveLinesDownAction"]
+            "before": [
+                "L"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
         },
         {
-            "before": [":"],
-            "after": ["$"]
+            "before": [
+                ":"
+            ],
+            "after": [
+                "$"
+            ]
         },
         {
-            "before": ["z"],
-            "after": ["e"]
-        }, 
+            "before": [
+                "z"
+            ],
+            "after": [
+                "e"
+            ]
+        },
         {
-            "before": ["Z"],
-            "after": ["E"]
+            "before": [
+                "Z"
+            ],
+            "after": [
+                "E"
+            ]
         }
-        
     ],
-
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["K"],
-            "commands": ["editor.action.moveLinesUpAction"]
+            "before": [
+                "."
+            ],
+            "after": [
+                ""
+            ]
         },
         {
-            "before": ["L"],
-            "commands": ["editor.action.moveLinesDownAction"]
-        },
-        
-        {
-            "before": ["m"],
-            "after": ["4","<C-e>"]
-        },
-        {
-            "before": ["<C-m>"],
-            "after": ["4","<C-y>"]
+            "before": [
+                "u"
+            ],
+            "commands": [
+                "undo",
+            ]
         },
         {
-            "before": ["f"],
-            "commands": ["editor.toggleFold"]
-        }, 
-        {
-            "before": ["<C-a>"],
-            "after": ["g","g","V","G"]
-        }, 
-
-        {
-            "before": [":"],
-            "after": ["$"]
+            "before": [
+                "<C-r>"
+            ],
+            "commands": [
+                "redo",
+            ]
         },
         {
-            "before": ["k"],
-            "after": ["<up>"]
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
         },
         {
-            "before": ["l"],
-            "after": ["<down>"]
+            "before": [
+                "L"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
         },
         {
-            "before": [";"],
-            "after": ["<right>"]
+            "before": [
+                "m"
+            ],
+            "after": [
+                "4",
+                "<C-e>"
+            ]
         },
         {
-            "before": ["j"],
-            "after": ["<left>"]
+            "before": [
+                "<C-m>"
+            ],
+            "after": [
+                "4",
+                "<C-y>"
+            ]
         },
         {
-            "before": ["z"],
-            "after": ["e"]
-        },  
-        {
-            "before": ["<C-k>"],
-            "after": ["8","<up>"]
+            "before": [
+                "f"
+            ],
+            "commands": [
+                "editor.toggleFold"
+            ]
         },
         {
-            "before": ["<C-l>"],
-            "after": ["8","<down>"]
+            "before": [
+                "<C-a>"
+            ],
+            "after": [
+                "g",
+                "g",
+                "V",
+                "G"
+            ]
         },
         {
-            "before": ["<C-j>"],
-            "after": ["^"]
+            "before": [
+                ":"
+            ],
+            "after": [
+                "$"
+            ]
         },
         {
-            "before": ["<C-right>"],
-            "after": ["$"]
+            "before": [
+                "k"
+            ],
+            "after": [
+                "<up>"
+            ]
         },
-        
+        {
+            "before": [
+                "l"
+            ],
+            "after": [
+                "<down>"
+            ]
+        },
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                "<right>"
+            ]
+        },
+        {
+            "before": [
+                "j"
+            ],
+            "after": [
+                "<left>"
+            ]
+        },
+        {
+            "before": [
+                "z"
+            ],
+            "after": [
+                "e"
+            ]
+        },
+        {
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "8",
+                "<up>"
+            ]
+        },
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "8",
+                "<down>"
+            ]
+        },
+        {
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "<C-right>"
+            ],
+            "after": [
+                "$"
+            ]
+        },
     ],
     "vim.normalModeKeyBindings": [
         {
-            "before": ["q"],
-            "commands": ["workbench.action.previousEditor"]
+            "before": [
+                "q"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
         },
         {
-            "before": ["e"],
-            "commands": ["workbench.action.nextEditor"]
+            "before": [
+                "e"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
         },
         {
-            "before": ["<tab>"],
-            "commands": ["editor.action.indentLines"]
+            "before": [
+                "<tab>"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
         },
         {
-            "before": ["<shift+tab>"],
-            "commands": ["editor.action.outdentLines"]
+            "before": [
+                "<shift+tab>"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
         }
     ],
-    "vim.commandLineModeKeyBindings": [
-  
-    ],
-    "vim.insertModeKeyBindingsNonRecursive": [
-    
-    ],
+    "vim.commandLineModeKeyBindings": [],
+    "vim.insertModeKeyBindingsNonRecursive": [],
     "vim.useSystemClipboard": true,
     "security.workspace.trust.untrustedFiles": "open",
     "editor.cursorBlinking": "solid",
@@ -235,7 +413,10 @@
     "editor.detectIndentation": false,
     "remote.SSH.defaultExtensions": [
         "scalameta.metals",
-        "matklad.rust-analyzer"
+        "matklad.rust-analyzer",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter-renderers"
     ],
     "update.showReleaseNotes": false,
     "update.mode": "none",
@@ -243,6 +424,8 @@
     "terminal.integrated.persistentSessionReviveProcess": "never",
     "terminal.integrated.confirmOnKill": "never",
     "terminal.integrated.defaultProfile.linux": "fish",
-    "terminal.integrated.enablePersistentSessions": false
-
+    "terminal.integrated.enablePersistentSessions": false,
+    "editor.formatOnSave": true,
+    "python.defaultInterpreterPath": "python3",
+    "extensions.ignoreRecommendations": true
 }
