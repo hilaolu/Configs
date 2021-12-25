@@ -421,11 +421,13 @@
     "update.showReleaseNotes": false,
     "update.mode": "none",
     "window.zoomLevel": 5,
-    "terminal.integrated.persistentSessionReviveProcess": "never",
-    "terminal.integrated.confirmOnKill": "never",
     "terminal.integrated.defaultProfile.linux": "fish",
-    "terminal.integrated.enablePersistentSessions": false,
     "editor.formatOnSave": true,
     "python.defaultInterpreterPath": "python3",
-    "extensions.ignoreRecommendations": true
+    "extensions.ignoreRecommendations": true,
+    "notebook.output.textLineLimit": 10,
+    "window.enableMenuBarMnemonics": false,
+    "window.customMenuBarAltFocus": false,
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.persistentSessionReviveProcess": "never"
 }

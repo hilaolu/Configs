@@ -1,6 +1,11 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "ctrl+c",
+        "command": "notebook.cell.quitEdit",
+        "when": "inputFocus && vim.mode != 'Insert' && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible"
+    },
+    {
         "key": "ctrl+,",
         "command": "notebook.focusPreviousEditor",
         "when": "vim.mode == 'Normal'"
@@ -732,11 +737,6 @@
         "key": "ctrl+.",
         "command": "-problems.action.showQuickFixes",
         "when": "problemFocus"
-    },
-    {
-        "key": "ctrl+c",
-        "command": "notebook.cell.quitEdit",
-        "when": "inputFocus && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible"
     },
     {
         "key": "escape",
