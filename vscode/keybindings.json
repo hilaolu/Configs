@@ -1,6 +1,26 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "ctrl+enter",
+        "command": "editor.action.insertLineAfter",
+        "when": "vim.mode == 'Insert' && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "i",
+        "command": "notebook.cell.edit",
+        "when": "notebookCellListFocused && notebookEditable && !inputFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "notebook.cell.moveUp",
+        "when": "!inputFocus && vim.mode != 'Insert' && notebookEditorFocused "
+    },
+    {
+        "key": "ctrl+l",
+        "command": "notebook.cell.moveDown",
+        "when": "!inputFocus && vim.mode != 'Insert' && notebookEditorFocused "
+    },
+    {
         "key": "ctrl+c",
         "command": "notebook.cell.quitEdit",
         "when": "inputFocus && vim.mode != 'Insert' && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible"
@@ -13,7 +33,7 @@
     {
         "key": "ctrl+enter",
         "command": "notebook.cell.execute",
-        "when": "vim.mode == 'Normal' && notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code'"
+        "when": "vim.mode != 'Insert' && notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && vim.mode == 'Normal'"
     },
     {
         "key": "ctrl+.",
@@ -745,11 +765,6 @@
     },
     {
         "key": "ctrl+enter",
-        "command": "-editor.action.insertLineAfter",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+enter",
         "command": "-notebook.cell.insertCodeCellBelow",
         "when": "notebookCellListFocused && !inputFocus"
     },
@@ -762,5 +777,50 @@
         "key": "ctrl+enter",
         "command": "-jupyter.runByLineStop",
         "when": "jupyter.notebookeditor.runByLineInProgress && notebookKernelCount > 0"
+    },
+    {
+        "key": "ctrl+; u",
+        "command": "-jupyter.moveCellsUp",
+        "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
+    },
+    {
+        "key": "alt+k",
+        "command": "-keybindings.editor.recordSearchKeys",
+        "when": "inKeybindings && inKeybindingsSearch"
+    },
+    {
+        "key": "shift+o",
+        "command": "notebook.cell.insertCodeCellAboveAndFocusContainer",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "a",
+        "command": "-notebook.cell.insertCodeCellAboveAndFocusContainer",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "-toggleSearchEditorContextLines",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "alt+l",
+        "command": "-toggleFindInSelection",
+        "when": "editorFocus"
+    },
+    {
+        "key": "o",
+        "command": "notebook.cell.insertCodeCellBelowAndFocusContainer",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "b",
+        "command": "-notebook.cell.insertCodeCellBelowAndFocusContainer",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-notebook.cell.executeAndFocusContainer",
+        "when": "notebookCellListFocused || editorTextFocus && inputFocus && notebookEditorFocused"
     }
 ]

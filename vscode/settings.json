@@ -420,7 +420,7 @@
     ],
     "update.showReleaseNotes": false,
     "update.mode": "none",
-    "window.zoomLevel": 5,
+    "window.zoomLevel": 1,
     "terminal.integrated.defaultProfile.linux": "fish",
     "editor.formatOnSave": true,
     "python.defaultInterpreterPath": "python3",
@@ -429,5 +429,6 @@
     "window.enableMenuBarMnemonics": false,
     "window.customMenuBarAltFocus": false,
     "terminal.integrated.enablePersistentSessions": false,
-    "terminal.integrated.persistentSessionReviveProcess": "never"
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "notebook.lineNumbers": "on"
 }
