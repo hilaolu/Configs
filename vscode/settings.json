@@ -430,5 +430,6 @@
     "window.customMenuBarAltFocus": false,
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.persistentSessionReviveProcess": "never",
-    "notebook.lineNumbers": "on"
+    "notebook.lineNumbers": "on",
+    "terminal.integrated.inheritEnv": false
 }

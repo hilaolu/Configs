@@ -6,6 +6,16 @@
         "when": "vim.mode == 'Insert' && editorTextFocus && !editorReadonly"
     },
     {
+        "key": "q",
+        "command": "workbench.action.previousEditor",
+        "when": "notebookCellListFocused && notebookEditable && !inputFocus"
+    },
+    {
+        "key": "e",
+        "command": "workbench.action.nextEditor",
+        "when": "notebookCellListFocused && notebookEditable && !inputFocus"
+    },
+    {
         "key": "i",
         "command": "notebook.cell.edit",
         "when": "notebookCellListFocused && notebookEditable && !inputFocus"
