@@ -202,6 +202,22 @@
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
+                "<A-;>"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "<A-j>"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
                 "."
             ],
             "after": [
@@ -420,7 +436,6 @@
     ],
     "update.showReleaseNotes": false,
     "update.mode": "none",
-    "window.zoomLevel": 1,
     "terminal.integrated.defaultProfile.linux": "fish",
     "editor.formatOnSave": true,
     "python.defaultInterpreterPath": "python3",
@@ -431,5 +446,15 @@
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.persistentSessionReviveProcess": "never",
     "notebook.lineNumbers": "on",
-    "terminal.integrated.inheritEnv": false
+    "terminal.integrated.inheritEnv": false,
+    "jupyter.askForKernelRestart": false,
+    // "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0, PointerAlignment: Right}",
+    "C_Cpp.formatting": "vcFormat",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
+    "C_Cpp.vcFormat.newLine.beforeElse": false,
+    "window.zoomLevel": 1,
 }
