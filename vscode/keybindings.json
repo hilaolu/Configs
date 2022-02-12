@@ -41,14 +41,14 @@
         "when": "notebookCellListFocused && notebookEditable && !inputFocus"
     },
     {
-        "key": "ctrl+k",
+        "key": "shift+k",
         "command": "notebook.cell.moveUp",
-        "when": "!inputFocus && vim.mode != 'Insert' && notebookEditorFocused "
+        "when": "notebookEditorFocused && !inputFocus && vim.mode != 'Insert'"
     },
     {
-        "key": "ctrl+l",
+        "key": "shift+l",
         "command": "notebook.cell.moveDown",
-        "when": "!inputFocus && vim.mode != 'Insert' && notebookEditorFocused "
+        "when": "notebookEditorFocused && !inputFocus && vim.mode != 'Insert'"
     },
     {
         "key": "ctrl+c",
@@ -890,5 +890,9 @@
     {
         "key": "ctrl+shift+t",
         "command": "workbench.action.showAllSymbols"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
     }
 ]
