@@ -9,6 +9,10 @@ if status is-interactive
     set -x LANG "en_US.UTF-8"
     set -x LC_ALL "en_US.UTF-8"
     set -x EDITOR "code"
+
+    if type -q "direnv" 
+        direnv hook fish | source
+    end
     
 end
 
