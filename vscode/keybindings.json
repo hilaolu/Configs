@@ -1130,4 +1130,9 @@
         "command": "-latex-workshop.shortcut.underline",
         "when": "editorTextFocus && !editorReadonly && editorLangId =~ /latex|rsweave|jlweave/"
     },
+    {
+        "key": "enter",
+        "command": "-acceptSelectedSuggestion",
+        "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+    },
 ]

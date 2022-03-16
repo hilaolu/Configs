@@ -549,5 +549,4 @@
     ],
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.latex.outDir": "%DIR%/build",
-    "latex-workshop.viewer.pdf.internal.port": 10010,
 }
